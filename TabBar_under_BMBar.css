@@ -11,6 +11,10 @@
   display: none !important;
 }
 
+#toolbar-menubar {
+ padding: 4px 0 !important;
+}
+
 #TabsToolbar[movingtab] {
   padding-bottom: 0 !important;
 }
