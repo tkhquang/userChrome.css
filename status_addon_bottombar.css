@@ -1,4 +1,4 @@
-/* Use with https://github.com/Endor8/userChrome.js/blob/master/Firefox-57/RevertAddonBarStatusBar.uc.js */
+/* Seperated CSS for this Script: https://github.com/tkhquang/userChrome.js/blob/master/status_addon_bottombar.uc.js
 
 :root {
 --bottom-toolbar-text-color: 220, 220, 220; /* Color in decimal RGB */
