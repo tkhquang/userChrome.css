@@ -1,0 +1,90 @@
+/*
+  Use with Plain Dark theme
+  Use with `independent tabs` settings
+*/
+
+@keyframes pulse {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+    top: calc(50% - 175px);
+    left: calc(50% - 175px);
+  }
+}
+
+/* Hide .twisty and adjust margins. */
+.tab .twisty {
+  visibility: hidden;
+  margin-left: -12px;
+}
+
+/* Push tab labels slightly to the right. */
+.tab .label {
+  margin-left: 7px;
+}
+
+/* Adjust newtab button so it looks more balanced */
+.newtab-button {
+  padding-left: 5px !important;
+  padding-top: 3px !important;
+}
+
+/* Adjust style for tab that has sound playing. */
+.tab.sound-playing .favicon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: #2ad62a;
+  animation: pulse 2s ease-out 0s infinite;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* Adjust style for tab that is muted. */
+.tab.muted {
+  opacity: 0.5;
+}
+
+/* Adjust style for tab that is unread. */
+.tab.unread {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.tab.unread .label {
+  font-style: italic;
+}
+
+/* Force its state to 'scroll', adjust margin-left for width of scrollbar. */
+#tabbar {
+  transition: margin-left 0.3s ease !important;
+  overflow-y: scroll;
+  /*
+    `scrollbar-width: auto`: -12px
+    `scrollbar-width: thin`: -6px
+  */
+  margin-left: -12px;
+
+  /*
+    Note that the below will be override if you have a Universal Styling for scrollbars using CSS Scrollbars properties:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars
+  */
+  scrollbar-width: auto;
+  scrollbar-color: #0055aa #252525;
+}
+
+/* Only shows scrollbar on hovering */
+#tabbar.overflow:hover {
+  margin-left: 0;
+}
+
+/* I notice while playing music on Spotify the favicon's color doesn't look right */
+.tab[data-current-uri*="spotify.com"].sound-playing .favicon::after {
+  filter: invert(100%);
+}
