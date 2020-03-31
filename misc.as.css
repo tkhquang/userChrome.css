@@ -21,15 +21,19 @@
   height: calc(var(--toolbar-height) - 5px) !important;
 }
 
-/* Separators on my bookmark bar is barely visible
-  as its color match the backgound */
+/*
+  Separators on my bookmark bar is barely visible
+  as its color match the backgound
+*/
 toolbarseparator {
   filter: invert(0.5) !important;
 }
 
-/* Github icon on my bookmark bar is barely visible
-  as its color match the backgound */
-.toolbarbutton-icon[label="GitHub"] {
+/*
+  Github icon on my bookmark bar is barely visible
+  as its color match the backgound
+*/
+.toolbarbutton-icon[src^="page-icon:https://github.com/"] {
   filter: invert(65%) !important;
 }
 
