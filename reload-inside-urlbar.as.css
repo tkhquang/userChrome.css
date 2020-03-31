@@ -29,6 +29,8 @@
   margin-right: 30px !important;
 }
 #stop-reload-button {
+  position: relative;
+  z-index: 3;
   transform: translateX(-36px);
   margin-right: -36px !important;
 }
