@@ -1,6 +1,6 @@
 /*
   STYLING FOR RAW GITHUB CONTENT PAGE
-  Ex: https://raw.githubusercontent.com/tkhquang/userChrome.css/master/raw-github-content.css
+  Ex: https://raw.githubusercontent.com/tkhquang/userChrome.css/master/userContent/raw-github-content.css
 */
 
 @-moz-document url-prefix(https://raw.githubusercontent.com) {
