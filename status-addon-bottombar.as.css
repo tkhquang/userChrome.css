@@ -8,6 +8,10 @@
   --bottom-toolbar-background-color: 0, 0, 0; /* Color in decimal RGB */
 }
 
+#browser-bottombox {
+  background-color: unset !important;
+}
+
 #addonbar {
   background-color: rgb(var(--bottom-toolbar-background-color)) !important;
 }
