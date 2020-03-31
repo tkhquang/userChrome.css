@@ -1,16 +1,13 @@
 /* ONLY SHOWS TEXT FOR FOLDERS IN THE BOOKMARK BAR */
 
-/* Override the default spaces for the items (1px - margin + 4px padding) */
-.bookmark-item {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
 /* Hide the text from items which are not menu folders */
 toolbarbutton.bookmark-item:not([type="menu"]) .toolbarbutton-text {
   display: none !important;
+}
+
+/* Shift the text (name of the folders) slightly to the right */
+toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
+  margin-left: 4px !important;
 }
 
 #PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
